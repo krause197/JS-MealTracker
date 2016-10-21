@@ -1,0 +1,20 @@
+{
+  "name": "meal-tracker",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Eric Krause <krause197@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/krause197/JS-MealTracker",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
