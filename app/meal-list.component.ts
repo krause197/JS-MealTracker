@@ -6,17 +6,19 @@ import { Meal } from './meal.model';
   inputs: ['childMealList'],
   template: `
     <div *ngIf="childMealList">
-      <h2>Meals Recorded</h2>
+      <h2 class="text-right">Meals Recorded
       <select (change)="onChangeFilter($event.target.value)">
         <option value="All">Show All Recorded Meals</option>
-        <option value="High Calorie">Show All Meals Above 500 Calories</option>
-        <option value="Low Calorie">Show All Meals Lower than 500 Calories</option>
-      </select>
-      <div *ngFor="meal of childMealList | filter:filterBy">
-        <p>Name: {{ meal.name }}</p>
-        <p>Details: {{ meal.details }}</p>
-        <p>Calories: {{ meal.calories }}</p>
-        <button class="btn btn-default btn-sm" (click)="editClicked(meal)">Edit Recorded Meal</button>
+        <option value="HighCalorie">Show All Meals Above 500 Calories</option>
+        <option value="LowCalorie">Show All Meals Lower than 500 Calories</option>
+      </select></h2>
+      <div *ngFor="let meal of childMealList | filter:filterTotal">
+        <div class="list" id="meal">
+          <p>Name: {{ meal.name }}</p>
+          <p>Details: {{ meal.details }}</p>
+          <p>Calories: {{ meal.calories }}</p>
+          <button class="btn btn-default btn-sm" (click)="editClicked(meal)">Edit Recorded Meal</button>
+        </div>
       </div>
       <edit-meal [meal]="editMeal" (doneClickedSender)="doneClicket($event)"></edit-meal>
     </div>
@@ -25,10 +27,10 @@ import { Meal } from './meal.model';
 
   export class MealListComponent {
     public childMealList: Meal[];
-    public filterBy: string = 'All';
+    public filterTotal: string = 'All';
     public editMeal: Meal = null;
     onChangeFilter(optionSelected) {
-      this.filterBy = optionSelected;
+      this.filterTotal = optionSelected;
     }
     editClicked(meal: Meal) {
       this.editMeal = meal;
