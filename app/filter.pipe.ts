@@ -7,8 +7,8 @@ import { Meal } from './meal.model';
 })
 
 export class FilterPipe implements PipeTransform {
-  transform(input: meal[], filterBy) {
-    var output: meal[] = [];
+  transform(input: Meal[], filterBy) {
+    var output: Meal[] = [];
     if(filterBy === 'Low Calorie'){
       for(var i = 0; i < input.length; i++) {
         if(input[i].calories < 500) {

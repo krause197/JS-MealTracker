@@ -12,8 +12,6 @@ Eric Krause
  Clone the repository at: [https://github.com/krause197/JS-MealTracker](https://github.com/krause197/JS-MealTracker).
 * In the console enter: $ git clone https://github.com/krause197/JS-MealTracker.git
 * Then change to the directory: $ cd JS-MealTracker
-* Run: $ npm init
-* Run: $ bower init
 * Run: $ npm install
 * Run: $ bower install
 * Run: $ gulp serve
