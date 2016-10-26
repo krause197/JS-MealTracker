@@ -16,7 +16,7 @@ export class FilterPipe implements PipeTransform {
         }
       }
       return output;
-    } else if(filterTotal === 'HighCalories'){
+    } else if(filterTotal === 'HighCalorie'){
       for(var i = 0; i < input.length; i++) {
         if(input[i].calories >= 500) {
           output.push(input[i])

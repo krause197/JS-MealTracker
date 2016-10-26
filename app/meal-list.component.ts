@@ -20,7 +20,7 @@ import { Meal } from './meal.model';
           <button class="btn btn-default btn-sm" (click)="editClicked(meal)">Edit Recorded Meal</button>
         </div>
       </div>
-      <edit-meal [meal]="editMeal" (doneClickedSender)="doneClicket($event)"></edit-meal>
+      <edit-meal [meal]="editMeal" (doneClickedSender)="doneClicked($event)"></edit-meal>
     </div>
   `
   })
